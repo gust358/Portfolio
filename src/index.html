@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header">
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu"></div>
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="#" class="items">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="items">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="items">Projetos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <h1>Gustavo Araujo</h1>
+        <h2>Full Stack Developer Jr</h2>
+        <div class="social-media">
+            <a href="https://github.com/gust358" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/gustavo-araujo-rocha-539ab2262/" target="_blank">Linkedin</a>
+        </div>
+    </header>
+    <main id="projects" class="container">
+        <div class="card-container">
+            <a href="https://swordpass.onrender.com/register" target="_blank">
+                <div class="card" id="swordpass">
+                    <div class="card-wrapper">
+                        <h2>Swordpass</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </a>
+            <div class="card-text">
+                Gerenciador de Senhas.
+            </div>
+        </div>
+        <div class="card-container">
+            <a href="./projects/memory-js/index.html" target="_blank">
+                <div class="card" id="memory">
+                    <div class="card-wrapper">
+                        <h2>Jogo da Memória</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </a>
+            <div class="card-text">
+                Jogo da memória tematizado com as tecnologias, das quais eu tenho conhecimento.
+            </div>
+        </div>
+        <div class="card-container">
+            <a href="./projects/tictactoe/index.html" target="_blank">
+                <div class="card" id="tictactoe">
+                    <div class="card-wrapper">
+                        <h2>Jogo da Velha</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </a>
+            <div class="card-text">
+                Jogo da velha com oponente.
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        document.querySelectorAll('.items').forEach((it) => {
+            it.addEventListener("click", () => {
+                document.getElementById("toggle").checked = false;
+            })
+        })
+    </script>
+</body>
+
+</html>
