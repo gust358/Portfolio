@@ -1,3 +1,6 @@
+[submodule "Memory-js"]
+	path = ./src/projects/Memory-js
+	url = https://github.com/gust358/Memory-js
 [submodule "TicTacToe-js"]
-	path = TicTacToe-js
+	path = ./src/projects/TicTacToe-js
 	url = https://github.com/gust358/TicTacToe-js
