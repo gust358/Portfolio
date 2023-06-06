@@ -6,9 +6,9 @@ let game = {
         'html',
         'javascript',
         'jquery',
-        'mongo',
-        'node',
-        'react'
+        'mongodb',
+        'node-js',
+        'react-js'
     ],
     cards: null,
     lockMode: false,

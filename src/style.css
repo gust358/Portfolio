@@ -5,7 +5,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    color: #1E1E2A;
+    /* color: #1E1E2A; */
+    color: black;
+    background-color: rgb(29, 27, 27);
+
 }
 
 /* HEADER */
@@ -13,7 +16,7 @@ body {
 .header-container {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(209, 212, 35);
+    background-color: rgb(6, 102, 57);
     background-image: url("./images/meNobg.png");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -48,9 +51,10 @@ a {
 }
 
 .social-media a {
-    color: #1E1E2A;
+    /* color: #1E1E2A; */
+    color: black;
     padding: 1rem 4rem;
-    border: 1px solid #1E1E2A;
+    border: 1px solid black;
     min-width: 4rem;
     display: flex;
     align-items: center;
@@ -58,7 +62,7 @@ a {
     transition: .5s ease-in-out;
 }
 
-a:hover {
+.social-media a:hover {
     background-color: #ffffff;
 }
 
@@ -80,17 +84,17 @@ a:hover {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9998;
     transition: 400ms ease-in-out 0s;
 }
 
 .checkbox .trace {
+    background-color: #ffffff;
     width: 50px;
     height: 2px;
-    background-color: #1E1E2A;
     position: absolute;
     border-radius: 4px;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out
 }
 
 .checkbox .trace:nth-child(1) {
@@ -114,13 +118,18 @@ a:hover {
 
 /* MENU */
 
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
 .menu {
     position: absolute;
     top: 28px;
     right: 30px;
     background-color: transparent;
-    height: 4px;
-    width: 10px;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 0px #ffffff;
     z-index: -1;
@@ -136,7 +145,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 9997;
     opacity: 0;
     visibility: hidden;
     transition: 400ms ease-in-out 0s;
@@ -159,7 +168,8 @@ a:hover {
 
 #toggle:checked+.checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
-    top: 47px
+    top: 47px;
+    background-color: #1E1E2A;
 }
 
 #toggle:checked+.checkbox .trace:nth-child(2) {
@@ -167,11 +177,13 @@ a:hover {
     width: 30px;
     visibility: hidden;
     opacity: 0;
+    background-color: #1E1E2A;
 }
 
 #toggle:checked+.checkbox .trace:nth-child(3) {
     transform: rotate(-45deg);
-    top: 48px
+    top: 48px;
+    background-color: #1E1E2A;
 }
 
 #toggle:checked+.checkbox {
@@ -180,7 +192,7 @@ a:hover {
 
 #toggle:checked~.menu {
     box-shadow: 0px 0px 0px 100vmax #ffffff;
-    z-index: 1;
+    z-index: 9996;
 }
 
 #toggle:checked~.menu-items {
@@ -190,21 +202,44 @@ a:hover {
 
 /* CARDS */
 
-.container {
-    height: auto;
+.projects-container {
+    height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     margin: 3rem 0;
 }
 
-.card-container {
+.title-projects {
+    color: #ffffff;
+    font-size: 2rem;
+    /* text-transform: uppercase; */
+    border: 1px solid #ffffff;
+    border-radius: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 5rem;
+    height: 30rem;
+    padding: 10px;
+}
+
+.projects {
+    transform: rotate(-90deg);
+}
+
+.card-container {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25rem;
+    height: 30rem;
 }
 
 .card {
@@ -215,10 +250,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url("./me.jfif"); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     filter: grayscale(0.5);
     color: #1E1E2A;
     cursor: pointer;
@@ -227,20 +258,33 @@ a:hover {
 
 #swordpass {
     background-color: rgb(88, 88, 236);
+    background-image: url("./images/swordpass_white_logo_noBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14rem;
 }
 
 #memory {
     background-color: #05c3ff;
+    background-image: url("./images/memory_white_logo_noBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50rem;
 }
 
 #tictactoe {
     background-color: rgb(196, 24, 24);
+    background-image: url("./images/tictactoe_logo_repeatable.png");
+    background-position: 52%;
+    background-repeat: repeat;
+    background-size: 8rem;
 }
 
 .card-text {
-    width: 40%;
+    text-align: center;
+    width: 25rem;
     letter-spacing: 1px;
-    /* color: #1E1E2A; */
+    color: white;
 }
 
 .card-wrapper {
@@ -290,10 +334,84 @@ a:hover {
     height: 200px;
     width: 200px;
     opacity: 1;
+
 }
 
 .card:hover>.card-wrapper p {
     opacity: 1;
     visibility: visible;
     font-size: 14px;
+}
+
+
+
+.techs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stack {
+    padding-right: 1rem;
+    border-right: 1px solid black;
+}
+
+.tech {
+    padding-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact {
+    color: #ffffff;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.info {
+    width: 26rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact a {
+    opacity: 0.5;
+    color: white;
+}
+
+.contact a:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.contact h3 {
+    color: #05c3ff
+}
+
+.title-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-title {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.horizontal-line {
+    width: 80vw;
+    height: 2px;
+    background-color: #ffffff;
 }

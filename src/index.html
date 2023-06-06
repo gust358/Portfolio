@@ -27,10 +27,10 @@
                                 <a href="#" class="items">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="items">Sobre</a>
+                                <a href="#projects" class="items">Projects</a>
                             </li>
                             <li>
-                                <a href="#projects" class="items">Projetos</a>
+                                <a href="#contact" class="items">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -39,18 +39,25 @@
         </div>
         <h1>Gustavo Araujo</h1>
         <h2>Full Stack Developer Jr</h2>
+        <div class="techs" id="techs">
+            <p class="stack">Tech Stack</p>
+        </div>
         <div class="social-media">
             <a href="https://github.com/gust358" target="_blank">Github</a>
             <a href="https://www.linkedin.com/in/gustavo-araujo-rocha-539ab2262/" target="_blank">Linkedin</a>
         </div>
+
     </header>
-    <main id="projects" class="container">
+    <section id="projects" class="projects-container">
+
+        <div class="title-projects">
+            <p class="projects">Projetos</p>
+        </div>
         <div class="card-container">
-            <a href="https://swordpass.onrender.com/register" target="_blank">
+            <a href="https://swordpass.onrender.com/" target="_blank">
                 <div class="card" id="swordpass">
                     <div class="card-wrapper">
-                        <h2>Swordpass</h2>
-                        <p>Vem ver!</p>
+                        <p>Abrir!</p>
                     </div>
                 </div>
             </a>
@@ -62,21 +69,19 @@
             <a href="./projects/Memory-js/index.html" target="_blank">
                 <div class="card" id="memory">
                     <div class="card-wrapper">
-                        <h2>Jogo da Memória</h2>
-                        <p>Vem ver!</p>
+                        <p>Abrir!</p>
                     </div>
                 </div>
             </a>
             <div class="card-text">
-                Jogo da memória tematizado com as tecnologias, das quais eu tenho conhecimento.
+                Jogo da memória tematizado com tecnologias.
             </div>
         </div>
         <div class="card-container">
             <a href="./projects/TicTacToe-js/index.html" target="_blank">
                 <div class="card" id="tictactoe">
                     <div class="card-wrapper">
-                        <h2>Jogo da Velha</h2>
-                        <p>Vem ver!</p>
+                        <p>Abrir!</p>
                     </div>
                 </div>
             </a>
@@ -84,16 +89,37 @@
                 Jogo da velha com oponente.
             </div>
         </div>
-    </main>
-    <footer></footer>
+    </section>
+    <footer class="contact-container" id="contact">
+        <div class="title-container">
+            <p class="contact-title">
+                Contato
+            </p>
+            <div class="horizontal-line"></div>
+        </div>
+        <div class="contact">
+            <div class="contact-social">
+                <h3>Social Medias</h3>
+                <div class="links">
+                    <a href="https://github.com/gust358" target="_blank">Github</a>
+                    <a href="https://www.linkedin.com/in/gustavo-araujo-rocha-539ab2262/" target="_blank">Linkedin</a>
+                    <a href="https://www.instagram.com/gust_arroc/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="phone info">
+                    <h3>Phone</h3>
+                    <a href="https://wa.me/5547988360882">(47) 98836-0882</a>
+                </div>
+                <div class="email info">
+                    <h3>Email</h3>
+                    <p>gustavoar358@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        document.querySelectorAll('.items').forEach((it) => {
-            it.addEventListener("click", () => {
-                document.getElementById("toggle").checked = false;
-            })
-        })
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
